@@ -1,5 +1,6 @@
 import { SiGmail, SiWhatsapp } from "react-icons/si";
 import Tooltip from "../Tooltip";
+import UnstyledLink from "../links/UnstyledLink";
 
 const Footer = () => {
   return (
@@ -22,7 +23,12 @@ const Footer = () => {
             </Tooltip>
           </div>
         </div>
-        <p className="mt-8 text-sm dark:text-gray-200">© 2024 Deasy Wahyuni</p>
+        <p className="mt-8 text-sm dark:text-gray-200">
+          © 2024 Deasy Wahyuni •{" "}
+          <UnstyledLink href="https://forms.gle/Vd6S6DiKs8jfi9cr8">
+            Got any feedback?
+          </UnstyledLink>
+        </p>
       </main>
     </footer>
   );

@@ -25,8 +25,6 @@ export default function Header() {
         { href: "/matlab", label: "Matlab" },
         { href: "/latihan", label: "Latihan" },
         { href: "/research", label: "Research" },
-        { href: "/tanya-jawab", label: "Tanya Jawab" },
-        { href: "/umpan-balik", label: "Umpan Balik" },
       ],
     },
     { href: "/petunjuk", label: "Petunjuk" },
