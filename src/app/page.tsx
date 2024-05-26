@@ -49,7 +49,7 @@ const page = async () => {
         <section className="py-20">
           <div className="layout">
             <h2 className="text-2xl md:text-4xl" id="materials">
-              <Accent>Featured Latihan</Accent>
+              <Accent>Latihan</Accent>
             </h2>
             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
               {posts.map((post) => (
