@@ -59,7 +59,7 @@ export default function Post({ params }: any) {
   const props = getPost(params);
 
   return (
-    <div className="py-6 px-4">
+    <div className="py-6 px-4 mt-10">
       <div className="max-w-3xl mx-auto dark:bg-[#3c8b89] dark:bg-opacity-5 p-4 rounded-md bg-[#3c8b89] bg-opacity-5 overflow-hidden">
         <CloudinaryImg
           publicId={`yogimulyana/blog/banner/${props.frontmatter.banner}`}

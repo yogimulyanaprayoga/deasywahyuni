@@ -1,9 +1,6 @@
 import { getAllFilesFrontmatter } from "@/lib/mdx.server";
-import { getTags, sortByDate } from "@/lib/mdx.client";
+import { sortByDate } from "@/lib/mdx.client";
 import BlogCard from "@/components/content/blog/BlogCard";
-import { BlogFrontmatter } from "@/types/frontmatters";
-import { useEffect, useState } from "react";
-import Accent from "@/components/Accent";
 
 export default async function BlogPage() {
   const files = await getAllFilesFrontmatter("blog");
@@ -54,9 +51,9 @@ export default async function BlogPage() {
   return (
     <main>
       <div className="layout min-h-main py-12">
-        <h1 className="text-3xl md:text-5xl dark:text-white">Blog</h1>
+        <h1 className="text-3xl md:text-5xl dark:text-white">Materi</h1>
         <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Thoughts, mental models, and tutorials about front-end development.
+          Materi adalah segala sesuatu yang memiliki massa dan menempati ruang.
         </p>
 
         <ul className="mt-6 grid gap-4 grid-cols-1 md:grid-cols-2">

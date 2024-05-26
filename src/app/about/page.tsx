@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <main>
-      <section className="layout pt-20">
+      <section className="layout pt-20 mt-4">
         <h2>About</h2>
         <h1 className="mt-1">
           <Accent>Deasy Wahyuni</Accent>
@@ -28,10 +28,10 @@ const AboutPage = () => {
             <p>
               Saya adalah seorang dosen tetap yang aktif mengajar di Universitas
               Dumai pada program studi Teknik Informatika. Dengan gelar
-              pendidikan tertinggi S2, saya saat ini menjabat sebagai Lektor.
-              Sebagai seorang perempuan yang berdedikasi dalam bidang akademik,
-              saya terus berkontribusi dalam pengembangan ilmu pengetahuan dan
-              pendidikan di perguruan tinggi ini.
+              pendidikan tertinggi S2, saya saat ini menjabat sebagai struktural
+              Lektor. Sebagai seorang perempuan yang berdedikasi dalam bidang
+              akademik, saya terus berkontribusi dalam pengembangan ilmu
+              pengetahuan dan pendidikan di perguruan tinggi ini.
             </p>
           </article>
           <h3 className="h4 mt-4">Education</h3>

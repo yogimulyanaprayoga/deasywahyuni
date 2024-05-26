@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import clsx from "clsx";
+import UnstyledLink from "../links/UnstyledLink";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,31 +21,27 @@ export default function Header() {
     {
       label: "Pembelajaran",
       submenu: [
-        { href: "/materi", label: "Materi" },
+        { href: "/blog", label: "Materi" },
+        { href: "/matlab", label: "Matlab" },
         { href: "/latihan", label: "Latihan" },
-        { href: "/vidio", label: "Video" },
-        { href: "/forum", label: "Forum" },
+        { href: "/research", label: "Research" },
+        { href: "/tanya-jawab", label: "Tanya Jawab" },
+        { href: "/contact", label: "Contact" },
+        { href: "/umpan-balik", label: "Umpan Balik" },
       ],
     },
     { href: "/petunjuk", label: "Petunjuk" },
   ];
 
   return (
-    <nav className="layout bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="layout bg-white border-gray-200 dark:bg-gray-900 z-50 fixed top-0 right-0 left-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
-        <a
+        <UnstyledLink
           href="https://flowbite.com/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-          </span>
-        </a>
+          <h3>Deasy</h3>
+        </UnstyledLink>
         <div className="flex md:order-2">
           <button
             type="button"
@@ -132,7 +129,7 @@ export default function Header() {
               placeholder="Search..."
             />
           </div>
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col z-50 p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {links.map((link) => (
               <li key={link.label} className="relative">
                 {link.submenu ? (
@@ -144,7 +141,7 @@ export default function Header() {
                       {link.label}
                     </button>
                     {dropdownOpen === link.label && (
-                      <ul className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2">
+                      <ul className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2 z-50">
                         {link.submenu.map((sublink) => (
                           <li key={sublink.label}>
                             <a
