@@ -36,7 +36,7 @@ export default function Header() {
     <nav className="layout bg-white border-gray-200 dark:bg-gray-900 z-50 fixed top-0 right-0 left-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
         <UnstyledLink
-          href="https://flowbite.com/"
+          href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <h3>Deasy</h3>
