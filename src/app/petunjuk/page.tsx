@@ -12,7 +12,7 @@ const PetunjukPage = () => {
   return (
     <main>
       <div className="layout mt-20 min-h-main py-12">
-        <h1 className="text-3xl md:text-5xl dark:text-white">Materi</h1>
+        <h1 className="text-3xl md:text-5xl dark:text-white">Petunjuk</h1>
         <p className="mt-2 text-gray-600 dark:text-gray-300">
           Petunjuk penggunaan blog
         </p>
@@ -38,7 +38,7 @@ const PetunjukPage = () => {
               </UnstyledLink>
             </li>
             <li>
-              Berikan Penilaian terhdap blog ini pada bagian Umpan balik yang
+              Berikan Penilaian terhadap blog ini pada bagian Umpan balik yang
               berada di footer
             </li>
             <li>Selamat mencoba.</li>

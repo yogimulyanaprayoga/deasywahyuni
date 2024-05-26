@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
 import UnstyledLink from "../links/UnstyledLink";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const dropdownRefs = useRef<Record<string, HTMLUListElement | null>>({});
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -14,6 +16,37 @@ export default function Header() {
   const toggleDropdown = (label: string) => {
     setDropdownOpen((prev) => (prev === label ? null : label));
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    // Close dropdowns if clicking outside
+    if (
+      dropdownOpen &&
+      dropdownRefs.current[dropdownOpen] &&
+      !dropdownRefs.current[dropdownOpen]!.contains(event.target as Node)
+    ) {
+      setDropdownOpen(null);
+    }
+    // Close menu if clicking outside
+    if (
+      menuOpen &&
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node)
+    ) {
+      setMenuOpen(false);
+    }
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    setDropdownOpen(null);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownOpen, menuOpen]);
 
   const links = [
     { href: "/", label: "Home" },
@@ -62,7 +95,7 @@ export default function Header() {
                 d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
               />
             </svg>
-            <span className="sr-only">Search</span>
+            <span className="sr-only">Toggle menu</span>
           </button>
           <div className="relative hidden md:block">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -92,6 +125,7 @@ export default function Header() {
           </div>
         </div>
         <div
+          ref={menuRef}
           className={clsx(
             "items-center justify-between w-full md:flex md:w-auto md:order-1",
             {
@@ -138,11 +172,15 @@ export default function Header() {
                       {link.label}
                     </button>
                     {dropdownOpen === link.label && (
-                      <ul className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2 z-50">
+                      <ul
+                        ref={(el) => (dropdownRefs.current[link.label] = el)}
+                        className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2 z-50"
+                      >
                         {link.submenu.map((sublink) => (
                           <li key={sublink.label}>
                             <UnstyledLink
                               href={sublink.href}
+                              onClick={handleLinkClick}
                               className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             >
                               {sublink.label}
@@ -155,6 +193,7 @@ export default function Header() {
                 ) : (
                   <UnstyledLink
                     href={link.href}
+                    onClick={handleLinkClick}
                     className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}

@@ -16,7 +16,7 @@ export default function LatihanPage() {
         <article className="prose mt-2 dark:prose-invert">
           <ol className="mt-6">
             <li>
-              Tutorial pengenalan Matlab{" "}
+              Latihan penggunaan aplikasi Matlab{" "}
               <CustomLink href="https://bit.ly/3VczMgu">disini</CustomLink> :
             </li>
           </ol>
