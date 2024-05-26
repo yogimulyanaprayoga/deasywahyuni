@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CustomLink from "@/components/links/CustomLink";
 
 export default function LatihanPage() {
@@ -8,11 +9,18 @@ export default function LatihanPage() {
         <article className="prose mt-2 dark:prose-invert">
           <ol className="mt-6">
             <li>
-              Untuk latihan bisa kalian akses{" "}
+              Tutorial pengenalan Matlab{" "}
               <CustomLink href="https://bit.ly/3VczMgu">disini</CustomLink> :
             </li>
           </ol>
         </article>
+        <Image
+          src="/latihan-image.jpg"
+          alt="Profile"
+          width={488}
+          height={425}
+          // className="w-40 md:w-72"
+        />
       </div>
     </main>
   );
