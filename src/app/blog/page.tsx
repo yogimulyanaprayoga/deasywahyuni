@@ -1,6 +1,7 @@
 import { getAllFilesFrontmatter } from "@/lib/mdx.server";
 import { sortByDate } from "@/lib/mdx.client";
 import BlogCard from "@/components/content/blog/BlogCard";
+import CustomLink from "@/components/links/CustomLink";
 
 export default async function BlogPage() {
   const files = await getAllFilesFrontmatter("blog");
@@ -52,10 +53,28 @@ export default async function BlogPage() {
     <main>
       <div className="layout mt-20 min-h-main py-12">
         <h1 className="text-3xl md:text-5xl dark:text-white">Materi</h1>
-        <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Materi adalah segala sesuatu yang memiliki massa dan menempati ruang.
-        </p>
-
+        <article className="prose mt-2 dark:prose-invert">
+          <p className="mt-2 text-gray-600 dark:text-gray-300">
+            Untuk Buku buku dari materi pembelajaran.
+          </p>
+          <ol className="mt-2">
+            <li>
+              <CustomLink href="https://bit.ly/4bTOoHm">
+                Link Metode Numerik
+              </CustomLink>
+            </li>
+            <li>
+              <CustomLink href="https://bit.ly/4aDvJOX">
+                Link Buku Rinaldi Munir
+              </CustomLink>
+            </li>
+            <li>
+              <CustomLink href="https://bit.ly/4aDP1Uh">
+                Link Zoom Perkuliahan
+              </CustomLink>
+            </li>
+          </ol>
+        </article>
         <ul className="mt-6 grid gap-4 grid-cols-1 md:grid-cols-2">
           {posts.map((post) => (
             <BlogCard key={post.slug} post={post} />

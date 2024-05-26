@@ -28,10 +28,10 @@ const AboutPage = () => {
             <p>
               Saya adalah seorang dosen tetap yang aktif mengajar di Universitas
               Dumai pada program studi Teknik Informatika. Dengan gelar
-              pendidikan tertinggi S2, saya saat ini menjabat sebagai struktural
-              Lektor. Sebagai seorang perempuan yang berdedikasi dalam bidang
-              akademik, saya terus berkontribusi dalam pengembangan ilmu
-              pengetahuan dan pendidikan di perguruan tinggi ini.
+              pendidikan tertinggi S2, dengan jabatan struktural Lektor. Sebagai
+              seorang perempuan yang berdedikasi dalam bidang akademik, saya
+              terus berkontribusi dalam pengembangan ilmu pengetahuan dan
+              pendidikan di perguruan tinggi ini.
             </p>
           </article>
           <h3 className="h4 mt-4">Education</h3>

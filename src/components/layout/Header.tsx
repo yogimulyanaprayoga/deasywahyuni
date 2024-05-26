@@ -26,7 +26,6 @@ export default function Header() {
         { href: "/latihan", label: "Latihan" },
         { href: "/research", label: "Research" },
         { href: "/tanya-jawab", label: "Tanya Jawab" },
-        { href: "/contact", label: "Contact" },
         { href: "/umpan-balik", label: "Umpan Balik" },
       ],
     },

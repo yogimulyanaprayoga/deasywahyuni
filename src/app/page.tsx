@@ -22,10 +22,10 @@ const page = async () => {
             You can call me Deasy
           </h1>
           <p className="mt-2 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg">
-            Statistics Lecturer at Universitas Dumai
+            Mathematic Lecturer at Universitas Dumai
           </p>
           <p className="mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl">
-            I am a statistics lecturer currently teaching at Dumai University
+            I am a Mathematic lecturer currently teaching at Dumai University
           </p>
           <p className="mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl">
             Make sure to study my materials.

@@ -1,7 +1,30 @@
+import CustomLink from "@/components/links/CustomLink";
+
 export default function MatlabPage() {
   return (
-    <div className="h-screen flex justify-center items-center">
-      <h1>Matlab Page</h1>
-    </div>
+    <main>
+      <div className="layout mt-20 min-h-main py-12">
+        <h1 className="text-3xl md:text-5xl dark:text-white">Matlab</h1>
+        <p className="mt-2 text-gray-600 dark:text-gray-300">
+          Cara - cara penginstalan matlab
+        </p>
+        <article className="prose mt-2 dark:prose-invert">
+          <ol className="mt-6">
+            <li>
+              Download matlab pada{" "}
+              <CustomLink href="https://www.mathworks.com/">disini</CustomLink>
+            </li>
+            <li>
+              Untuk contoh Algoritma dan syntax Matlab bisa kalian lihat{" "}
+              <CustomLink href="https://bit.ly/3R54dmn">disini</CustomLink>
+            </li>
+            <li>
+              Contoh Syntax Matlab Metode Iterasi Tiga Langkah bisa kalian lihat{" "}
+              <CustomLink href="https://bit.ly/3WYPFss">disini</CustomLink>
+            </li>
+          </ol>
+        </article>
+      </div>
+    </main>
   );
 }
