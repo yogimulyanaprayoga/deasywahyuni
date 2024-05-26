@@ -50,7 +50,7 @@ export default async function BlogPage() {
 
   return (
     <main>
-      <div className="layout min-h-main py-12">
+      <div className="layout mt-20 min-h-main py-12">
         <h1 className="text-3xl md:text-5xl dark:text-white">Materi</h1>
         <p className="mt-2 text-gray-600 dark:text-gray-300">
           Materi adalah segala sesuatu yang memiliki massa dan menempati ruang.

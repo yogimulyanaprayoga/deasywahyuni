@@ -144,24 +144,24 @@ export default function Header() {
                       <ul className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2 z-50">
                         {link.submenu.map((sublink) => (
                           <li key={sublink.label}>
-                            <a
+                            <UnstyledLink
                               href={sublink.href}
                               className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                             >
                               {sublink.label}
-                            </a>
+                            </UnstyledLink>
                           </li>
                         ))}
                       </ul>
                     )}
                   </>
                 ) : (
-                  <a
+                  <UnstyledLink
                     href={link.href}
                     className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
-                  </a>
+                  </UnstyledLink>
                 )}
               </li>
             ))}
