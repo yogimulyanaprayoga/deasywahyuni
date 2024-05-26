@@ -19,37 +19,27 @@ const PetunjukPage = () => {
         <article className="prose dark:prose-invert">
           <ol>
             <li>
-              Pilihlah materi yang Anda pelajari pada menu{" "}
+              Pilihlah materi yang Anda pelajari pada menu {"Pembelajaran > "}
               <UnstyledLink href="/blog">
-                <Accent>Materi</Accent> .
+                <Accent>Materi</Accent>
               </UnstyledLink>
             </li>
             <li>
-              Anda disarankan untuk membaca materi terlebih dahulu sebelum
-              memulai latihan soal literasi matematika. Ini bertujuan untuk
-              mengingatkan kembali Anda pada materi yang telah dipelajari
-              (Apresepsi)
+              Untuk Aplikasi, petunjuk penggunaan, serta syntax Matlab tesedia
+              di {"Pembelajaran > "}
+              <UnstyledLink href="/matlab">
+                <Accent>Matlab</Accent>
+              </UnstyledLink>
             </li>
             <li>
-              Selanjutnya pilihlah menu{" "}
+              Latihan tersedia di {"Pembelajaran > "}
               <UnstyledLink href="/latihan">
-                <Accent>Latihan</Accent>.
-              </UnstyledLink>{" "}
-              dan pilih materi yang sesuai
-            </li>
-            <li>
-              Kerjakan pre tes di awal, jika Anda dapat mengerjakan dengan{" "}
-              {"benar >75%"} jumlah soal yang ada maka Anda bisa memulai
-              mencermati masalah yang disajikan, jika belum Anda disarankan
-              untuk mempelajari materi sekali lagi dan melakukan pretes kembali.
-            </li>
-            <li>
-              Cermati setiap informasi pada permasalahan yang disajikan, hasil
-              pekerjaan dapat Anda masukkan pada form tersedia atau dapat Anda
-              post pada menu{" "}
-              <UnstyledLink href="/forum-diskusi">
-                <Accent>forum diskusi</Accent>.
+                <Accent>Latihan</Accent>
               </UnstyledLink>
+            </li>
+            <li>
+              Berikan Penilaian terhdap blog ini pada bagian Umpan balik yang
+              berada di footer
             </li>
             <li>Selamat mencoba.</li>
           </ol>

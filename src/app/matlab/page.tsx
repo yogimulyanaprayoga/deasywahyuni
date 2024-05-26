@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CustomLink from "@/components/links/CustomLink";
 
 export default function MatlabPage() {
@@ -5,10 +6,17 @@ export default function MatlabPage() {
     <main>
       <div className="layout mt-20 min-h-main py-12">
         <h1 className="text-3xl md:text-5xl dark:text-white">Matlab</h1>
+        <Image
+          src="/matlab.jpg"
+          width={400}
+          height={200}
+          alt="matlab-image"
+          className="mt-8"
+        />
         <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Cara - cara penginstalan matlab
+          Cara - cara Penginstalan Matlab
         </p>
-        <article className="prose mt-2 dark:prose-invert">
+        <article className="prose dark:prose-invert">
           <ol className="mt-6">
             <li>
               Download matlab pada{" "}
