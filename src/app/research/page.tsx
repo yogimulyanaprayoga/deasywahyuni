@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CustomLink from "@/components/links/CustomLink";
 
 export default function ResearchPage() {
@@ -14,6 +15,12 @@ export default function ResearchPage() {
             </li>
           </ol>
         </article>
+        <div className="flex flex-wrap gap-4">
+          <Image src="/research1.jpg" alt="Profile" width={488} height={425} />
+          <Image src="/research2.jpg" alt="Profile" width={488} height={425} />
+          <Image src="/research3.jpg" alt="Profile" width={488} height={425} />
+          <Image src="/research4.jpg" alt="Profile" width={488} height={425} />
+        </div>
       </div>
     </main>
   );
